@@ -18,6 +18,7 @@ Body Section
 <div id="sidebar" class="span3">
 <div class="well well-small">
 	<ul class="nav nav-list">
+	<h1>${productByIDCategory.size() }</h1>
 		<li><a href="products.html"><span class="icon-chevron-right"></span>Fashion</a></li>
 		<li><a href="products.html"><span class="icon-chevron-right"></span>Watches</a></li>
 		<li><a href="products.html"><span class="icon-chevron-right"></span>Fine Jewelry</a></li>
@@ -140,8 +141,8 @@ Body Section
 			<div class="tab-pane fade" id="profile">
 			
 			<c:set var="countList" value="${ productByIDCategory.size() }" />
-			<c:if test="${ productByIDCategory.size() > 6 }">
-				<c:set var="countList" value="6" />
+			<c:if test="${ productByIDCategory.size() > 5 }">
+				<c:set var="countList" value="5" />
 			</c:if>
 			
 			<c:forEach var="item" items="${ productByIDCategory }" begin="1" end="${ countList }" varStatus="loop">

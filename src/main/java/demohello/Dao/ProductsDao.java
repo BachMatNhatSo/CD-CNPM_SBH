@@ -97,4 +97,18 @@ public class ProductsDao extends BaseDao {
 		
 		return listProducts;
 	}
+
+	private String SqlProductByID(long id) {
+		StringBuffer sql = SqlString();
+		sql.append("WHERE 1 = 1 ");
+		sql.append("AND p.id =  " + id + " ");
+		sql.append("LIMIT 1");
+		return sql.toString();
+	}
+	
+	public List<ProductsDto> GetProductsByID(long id) {
+		String sql =SqlProductByID(id);
+		List<ProductsDto> listProduct=_jbJdbcTemplate.query(sql, new ProductDtoMapper());
+		return listProduct;
+	}
 }
