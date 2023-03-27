@@ -1,5 +1,8 @@
 package demohello.Controller.User;
 
-public class ProductController {
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class ProductController extends BaseController{
 
 }
