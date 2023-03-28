@@ -44,13 +44,18 @@
 							class="icon-youtube"></span></a> <a href="#"><span
 							class="icon-tumblr"></span></a>
 					</div>
-					<a class="active" href="index.html"> <span class="icon-home"></span>
+					<a class="active" href="<c:url value="trang-chu"></c:url>"> <span class="icon-home"></span>
 						Trang Chủ	
-					</a> <a href="#"><span class="icon-user"></span> My Account</a> <a
-						href="<c:url value="/dang-ky"></c:url>"><span class="icon-edit"></span>Đăng Ký </a> <a href="contact.html"><span class="icon-envelope"></span>
-						Contact us</a> <a href="cart.html"><span
-						class="icon-shopping-cart"></span> 2 Item(s) - <span
-						class="badge badge-warning"> $448.42</span></a>
+					</a>	
+					<c:if test="${not empty Loginfo }">
+						<a href="#"><span class="icon-user"></span> ${Loginfo.displayname }</a>
+						<a href="<c:url value="dang-xuat"></c:url>"><span class="icon-edit"></span>Đăng Xuất </a> 
+					</c:if>		
+					<c:if test="${empty Loginfo }">
+						<a href="<c:url value="/dang-ky"></c:url>"><span class="icon-edit"></span>Đăng Ký </a> 
+					</c:if>							
+						<a href="contact.html"><span class="icon-envelope"></span>Contact us</a> 
+						<a href="cart.html"><span class="icon-shopping-cart"></span> 2 Item(s) - <span class="badge badge-warning"> $448.42</span></a>
 				</div>
 			</div>
 		</div>
