@@ -64,8 +64,8 @@
 		
 		
             		
-	<a href="products.html" class="shopBtn btn-large"><span class="icon-arrow-left"></span> Tiếp tục mua hàng </a>
-	<a href="login.html" class="shopBtn btn-large pull-right">Thanh toán <span class="icon-arrow-right"></span></a>
+	<a href="<c:url value="trang-chu"></c:url>" class="shopBtn btn-large"><span class="icon-arrow-left"></span> Tiếp tục mua hàng </a>
+	<a href="<c:url value="checkout"></c:url>" class="shopBtn btn-large pull-right">Thanh toán <span class="icon-arrow-right"></span></a>
 
 </div>
 </div>

@@ -45,12 +45,18 @@
 							class="icon-youtube"></span></a> <a href="#"><span
 							class="icon-tumblr"></span></a>
 					</div>
-					<a class="active" href="index.html"> <span class="icon-home"></span>
-						Home
-					</a> <a href="#"><span class="icon-user"></span> My Account</a> <a
-						href="register.html"><span class="icon-edit"></span> Free
-						Register </a> <a href="contact.html"><span class="icon-envelope"></span>
-						Contact us</a> <a href="<c:url value="/gio-hang/"></c:url>"><span
+					<a class="active" href="<c:url value="trang-chu"></c:url>"> <span class="icon-home"></span>
+						Trang Chủ	
+					</a>
+					<c:if test="${not empty Loginfo }">
+						<a href="#"><span class="icon-user"></span> ${Loginfo.displayname }</a>
+						<a href="<c:url value="dang-xuat"></c:url>"><span class="icon-edit"></span>Đăng Xuất </a> 
+					</c:if>		
+					 <c:if test="${empty Loginfo }">
+						<a href="<c:url value="dang-ky"></c:url>"><span class="icon-edit"></span>Đăng Ký </a> 
+					</c:if>				
+						
+						 <a href="<c:url value="gio-hang"></c:url>"><span
 						class="icon-shopping-cart"></span> ${ TotalQuantyCart } Sản phẩm - <span
 						class="badge badge-warning"> <fmt:formatNumber type="number" groupingUsed="true" value="${ TotalPriceCart }" />₫</span></a>
 				</div>

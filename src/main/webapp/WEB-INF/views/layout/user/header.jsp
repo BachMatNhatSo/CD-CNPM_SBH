@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="span4">
 			<h1>
-				<a class="logo" href="index.html"><span>Twitter Bootstrap
+				<a class="logo" href="<c:url value="trang-chu"></c:url>"><span>Twitter Bootstrap
 						ecommerce template</span> <img
 					src="<c:url value ="/assets/user/img/logo-bootstrap-shoping-cart.png"></c:url>"
 					alt="bootstrap sexy shop"> </a>
