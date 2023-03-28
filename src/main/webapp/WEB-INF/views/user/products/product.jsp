@@ -14,9 +14,12 @@
 <!-- 
 Body Section 
 -->
+
+<h1></h1>
 	<div class="row product-content">
 <div id="sidebar" class="span3">
 <div class="well well-small">
+<h1>${ productByIDCategory.size(	) }</h1>
 	<ul class="nav nav-list">
 		<li><a href="products.html"><span class="icon-chevron-right"></span>Fashion</a></li>
 		<li><a href="products.html"><span class="icon-chevron-right"></span>Watches</a></li>
@@ -100,7 +103,7 @@ Body Section
 				<h3>${ product.name }</h3>
 				<hr class="soft"/>
 				
-				<form class="form-horizontal qtyFrm">
+				<form class="form-horizontal qtyFrm" method="get" action="<c:url value="/AddCart/${ product.id_product }"/>">
 				  <div class="control-group">
 					<label class="control-label"><span><fmt:formatNumber type="number" groupingUsed="true" value="${ product.price }" />₫</span></label>
 					<div class="controls">
@@ -110,7 +113,7 @@ Body Section
 				
 				  <div class="control-group">
 					<label class="control-label"><span>Color</span></label>
-					<div class="controls">
+					<div class="controls"> 
 					  <select class="span11">
 						  <option>Red</option>
 						  <option>Purple</option>
@@ -122,7 +125,7 @@ Body Section
 				  <h4></h4>
 				  <p>${ product.title }
 				  <p>
-				  <button type="submit" class="shopBtn"><span class=" icon-shopping-cart"></span> Add to cart</button>
+				  <button type="submit" class="shopBtn"><span class=" icon-shopping-cart"></span> Thêm giỏ hàng</button>
 				</form>
 			</div>
 			</div>
