@@ -10,6 +10,21 @@ import demohello.Entity.Users;
 public class UsersDao extends BaseDao {
 	public int AddAccount(Users user) {
 		StringBuffer  sql = new StringBuffer();
+//		sql.append("INSERT INTO users ");
+//		sql.append("( ");
+//		sql.append("    user, ");
+//		sql.append("    password, ");
+//		sql.append("    displayname, ");
+//		sql.append("    address, ");
+//		sql.append("    vaitro ");
+//		sql.append(") ");
+//		sql.append("VALUES ");
+//		sql.append("( ");
+//		sql.append("    '"+user.getUser()+"', ");
+//		sql.append("    '"+user.getPassword()+"', ");
+//		sql.append("    '"+user.getDisplayname()+"', ");
+//		sql.append("    '"+user.getAddress()+"', ");
+//		sql.append("    '"+user.getVaitro()+"') ");
 		sql.append("INSERT INTO users ");
 		sql.append("( ");
 		sql.append("    user, ");

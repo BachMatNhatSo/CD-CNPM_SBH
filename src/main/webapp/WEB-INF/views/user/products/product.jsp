@@ -82,7 +82,7 @@ Body Section
 	</div>
 	<div class="span9">
     <ul class="breadcrumb">
-    <li><a href="index.html">Trang chủ</a> <span class="divider">/</span></li>
+    <li><a href="<c:url value="/trang-chu"></c:url>">Trang chủ</a> <span class="divider">/</span></li>
     <li><a href="products.html">Sản phẩm</a> <span class="divider">/</span></li>
     <li class="active">Chi tiết sản phẩm</li>
     </ul>	

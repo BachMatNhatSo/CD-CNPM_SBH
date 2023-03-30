@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="span4">
 			<h1>
-				<a class="logo" href="<c:url value="trang-chu"></c:url>"><span>Twitter Bootstrap
+				<a class="logo" href="<c:url value="/trang-chu"></c:url>"><span>Twitter Bootstrap
 						ecommerce template</span> <img
 					src="<c:url value ="/assets/user/img/logo-bootstrap-shoping-cart.png"></c:url>"
 					alt="bootstrap sexy shop"> </a>
@@ -22,7 +22,7 @@
 		</div>
 		<div class="span4 alignR">
 			<p>
-				<br> <strong> Support (24/7) : 0800 1234 678 </strong><br>
+				<br> <strong> Hỗ Trợ (24/7) : 0778378737 </strong><br>
 				<br>
 			</p>
 			<span class="btn btn-mini">${ TotalQuantyCart } <span

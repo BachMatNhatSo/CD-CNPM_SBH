@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController extends BaseController{
 
-	@RequestMapping(value = { "/", "trang-chu" })
+	@RequestMapping(value = { "/", "/trang-chu" })
 	public ModelAndView Index(HttpSession session, ModelMap model) {
 		
 		_mvShare.addObject("slides",_homeService.GetDataSlides());
@@ -20,4 +20,6 @@ public class HomeController extends BaseController{
 		_mvShare.setViewName("user/index");
 		return _mvShare;
 	}
+
+	
 }

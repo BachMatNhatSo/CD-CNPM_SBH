@@ -5,6 +5,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,7 +21,7 @@ public class UserController extends BaseController {
 
 	@RequestMapping(value = "/dang-ky", method = RequestMethod.GET)
 	public ModelAndView Register() {
-		_mvShare.setViewName("user/account/register");
+		_mvShare.setViewName("/register");
 		_mvShare.addObject("user", new Users());
 		return _mvShare;
 	}
@@ -35,7 +36,7 @@ public class UserController extends BaseController {
 
 		}
 		// _mvShare.addObject("status",true);
-		_mvShare.setViewName("user/account/register");
+		_mvShare.setViewName("/register");
 		return _mvShare;
 
 	}
@@ -43,21 +44,36 @@ public class UserController extends BaseController {
 	@RequestMapping(value = "/dang-nhap", method = RequestMethod.POST)
 	public ModelAndView login(HttpSession session, @ModelAttribute("user") Users user) {
 		 user = accountService.CheckAccount(user);
+		 String vaitro = user.getVaitro().toString();
 		if (user != null) {
-
-			_mvShare.setViewName("redirect:trang-chu");
-			session.setAttribute("Loginfo", user);
-		} else {
-			_mvShare.addObject("statusLogin", "Dang Nhap that bai");
-
+			if(vaitro.equals("ADMIN")){
+				_mvShare.setViewName("redirect:/admin/index");
+				session.setAttribute("Loginfo", user);
+			}else if (vaitro!=("ADMIN")){
+				_mvShare.setViewName("redirect:trang-chu");
+				session.setAttribute("Loginfo", user);
+			}else {
+				_mvShare.addObject("statusLogin", "Dang Nhap that bai");
+			}			
 		}
 		return _mvShare;
 	}
+	@RequestMapping(value = { "/admin/index" })
+	public ModelAndView Indexadmin(HttpSession session, ModelMap model) {			
+		_mvShare.setViewName("admin/quan-tri-index");
+		return _mvShare;
+	}
+	
 	
 	@RequestMapping(value = "/dang-xuat", method = RequestMethod.GET)
 	public String login(HttpSession session,HttpServletRequest request) {
 		session.removeAttribute("Loginfo");
 		return "redirect:"+request.getHeader("referer");
+	}
+	@RequestMapping(value = "/dang-xuat-admin", method = RequestMethod.GET)
+	public String logout(HttpSession session,HttpServletRequest request) {
+		session.removeAttribute("Loginfo");
+		return "redirect:trang-chu";
 	}
 
 }

@@ -42,6 +42,7 @@
 				   <form:input type="text" class="span3" placeholder="Mời Nhập Địa Chỉ" path="address" />
 				</div>
 			  </div>
+			
 			  <div class="controls">
 			  <button type="submit" class="btn block">Tạo Tài Khoản</button>
 			  </div>

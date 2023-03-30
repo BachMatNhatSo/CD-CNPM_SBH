@@ -6,8 +6,9 @@ public class Users {
 	private String password;
 	private String displayname;
 	private String address;
+	private String vaitro;
 	public Users() {
-		
+		super();
 	}
 	public long getId() {
 		return id;
@@ -17,6 +18,12 @@ public class Users {
 	}
 	public String getUser() {
 		return user;
+	}
+	public String getVaitro() {
+		return vaitro;
+	}
+	public void setVaitro(String vaitro) {
+		this.vaitro = vaitro;
 	}
 	public void setUser(String user) {
 		this.user = user;
