@@ -6,6 +6,7 @@
 <%@include file="/WEB-INF/views/layout/user/taglib.jsp"%>
 <body class="sb-nav-fixed">
 	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+	<h1>${categorys.size() }</h1>
 		<a class="navbar-brand ps-3" href="index.html">${Loginfo.displayname }</a>
 		<button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
 			id="sidebarToggle" href="#!">
@@ -36,7 +37,7 @@
 					<div class="nav">
 						<div class="sb-sidenav-menu-heading">Thông tin chính</div>
 						<a class="nav-link"
-							href="<c:url value="/admin/tong-quan"></c:url>">
+							href="<c:url value=""></c:url>">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-tachometer-alt"></i>
 							</div> Tổng Quan
@@ -204,14 +205,16 @@
 							<tr>
 								<th>Id</th>
 								<th>Tên loại sản phẩm</th>
+								
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach var="item" items="${ categorys }">
-						<li><a href='<c:url value="/san-pham/${ item.id }"></c:url>'><span
-								class="icon-circle-blank"></span> ${ item.name }</a></li>
-						<li>
-					</c:forEach>
+							<c:forEach var="item" items="${categorys}">
+							<tr>
+								<td>${item.id}</td>
+								<td>${item.name}</td>
+							</tr>
+							</c:forEach>
 						</tbody>
 					</table>
 				</div>

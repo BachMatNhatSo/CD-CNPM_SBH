@@ -24,6 +24,7 @@ public class HomeServiceImpl implements IHomeService {
 	private MenusDao menusDao;
 	@Autowired
 	private ProductsDao productsDao;
+	
 	public List<Slides> GetDataSlides() {
 		return slidesDao.GetDataSlides();
 	}

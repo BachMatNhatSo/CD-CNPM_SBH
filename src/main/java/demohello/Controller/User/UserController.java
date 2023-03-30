@@ -58,11 +58,7 @@ public class UserController extends BaseController {
 		}
 		return _mvShare;
 	}
-	@RequestMapping(value = { "/admin/index" })
-	public ModelAndView Indexadmin(HttpSession session, ModelMap model) {			
-		_mvShare.setViewName("admin/quan-tri-index");
-		return _mvShare;
-	}
+
 	
 	
 	@RequestMapping(value = "/dang-xuat", method = RequestMethod.GET)

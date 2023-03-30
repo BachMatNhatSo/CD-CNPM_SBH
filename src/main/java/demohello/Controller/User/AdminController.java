@@ -9,11 +9,27 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class AdminController extends BaseController {
-	@RequestMapping(value = { "/admin/tong-quan" })
-	public ModelAndView Index(HttpSession session, ModelMap model) {
-		_mvShare.addObject("categorys", _homeService.GetDataCategorys());
-		_mvShare.setViewName("/admin/quan-tri-index");
-		return _mvShare;
-	}
-
+//
+////	@RequestMapping(value = { "/admin/tong-quan" })
+////	public ModelAndView Index(HttpSession session, ModelMap model) {
+////		_mvShare.addObject("products",_homeService.GetDataProducts());
+////		_mvShare.setViewName("admin/quan-tri-index");
+////		return _mvShare;
+////	}
+////	@RequestMapping(value = { "/admin/index" })
+////	public ModelAndView Indexadmin(HttpSession session, ModelMap model) {
+////		_mvShare.addObject("categorys",_homeService.GetDataCategorys());
+////		_mvShare.setViewName("admin/quan-tri-index");
+////		
+////		return _mvShare;
+////	}
+//
+//	@RequestMapping(value = { "/admin/index" })
+//	public ModelAndView Index(HttpSession session, ModelMap model) {
+//		
+//		
+//		_mvShare.addObject("categorys",_homeService.GetDataProducts());
+//		_mvShare.setViewName("admin/quan-tri-index");
+//		return _mvShare;
+//	}
 }

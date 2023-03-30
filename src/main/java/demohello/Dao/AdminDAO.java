@@ -1,5 +1,20 @@
 package demohello.Dao;
 
-public class AdminDAO {
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import demohello.Entity.Categorys;
+import demohello.Entity.MapperCategorys;
+
+@Repository
+public class AdminDAO extends BaseDao {
+	public List<Categorys> GetDataCategorys() {
+		List<Categorys> list = new ArrayList<Categorys>();
+		String sql = "SELECT * FROM categorys";
+		list = _jbJdbcTemplate.query(sql, new MapperCategorys());
+		return list;
+	}
 
 }
