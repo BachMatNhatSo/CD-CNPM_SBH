@@ -33,7 +33,7 @@
 						<div class="collapse" id="collapseLayouts"
 							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								<a class="nav-link" href="layout-static.html">Tài khoản</a>
+								<a class="nav-link" href="<c:url value ="/admin/hienthitaikhoan"></c:url>">Tài khoản</a>
 								<a class="nav-link" href="<c:url value ="/admin/HienThiloaisanpham"></c:url>">Danh Sách Loại Sản Phẩm   </a>
 							</nav>
 						</div>
@@ -174,7 +174,7 @@
 						</div>
 						<div class="card-body">
 			
-			</div>
+						</div>
 					</div>
 				</div>
 			</main>

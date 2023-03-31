@@ -3,7 +3,6 @@
 <%@include file="/WEB-INF/views/layout/user/taglib.jsp" %>
 <title>Trang chủ</title>
 <body>
-<h1>${ categorys.size() }</h1>
 	<!-- 
 Body Section 
 -->

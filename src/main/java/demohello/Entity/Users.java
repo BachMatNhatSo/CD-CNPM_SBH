@@ -1,7 +1,7 @@
 package demohello.Entity;
 
 public class Users {
-	private long id;
+	private Integer  id;
 	private String user;
 	private String password;
 	private String displayname;
@@ -10,20 +10,25 @@ public class Users {
 	public Users() {
 		super();
 	}
-	public long getId() {
+	  public Users(Integer id, String user, String password, String displayname, String address, String vaitro) {
+		    this.id = id;
+		    this.user = user;
+		    this.password = password;
+		    this.displayname = displayname;
+		    this.address = address;
+		    this.vaitro = vaitro;
+		  }
+	
+	public Integer getId() {
 		return id;
 	}
-	public void setId(long id) {
+
+	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getUser() {
 		return user;
-	}
-	public String getVaitro() {
-		return vaitro;
-	}
-	public void setVaitro(String vaitro) {
-		this.vaitro = vaitro;
 	}
 	public void setUser(String user) {
 		this.user = user;
@@ -46,6 +51,11 @@ public class Users {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+	public String getVaitro() {
+		return vaitro;
+	}
+	public void setVaitro(String vaitro) {
+		this.vaitro = vaitro;
+	}
 }
 
