@@ -15,7 +15,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>ADMIN - Quản Lí </title>
+<title>ADMIN - Quản Lí</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css"
 	rel="stylesheet" />
@@ -25,7 +25,9 @@
 <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
 	crossorigin="anonymous"></script>
 </head>
+<%@include file="/WEB-INF/views/layout/admin/header.jsp"%>
 <decorator:body></decorator:body>
+<%@include file="/WEB-INF/views/layout/admin/footer.jsp"%>
 </html>
 
 

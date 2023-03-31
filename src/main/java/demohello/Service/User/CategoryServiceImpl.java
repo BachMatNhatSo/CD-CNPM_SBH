@@ -5,15 +5,18 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import demohello.Dao.CategorysDao;
 import demohello.Dao.ProductsDao;
 import demohello.Dto.ProductsDto;
+import demohello.Entity.Categorys;
 @Service
 
 public class CategoryServiceImpl implements ICategoryService{
 	
 	@Autowired
 	private ProductsDao productsDao;
-	
+	@Autowired
+	private CategorysDao categorysDao;
 	public List<ProductsDto> GetAllProductsByID(int id) {
 		return productsDao.GetAllProductsByID(id);
 	}
@@ -21,5 +24,9 @@ public class CategoryServiceImpl implements ICategoryService{
 	public List<ProductsDto> GetDataProductsPaginate(int id, int start, int totalPage) {
 		return productsDao.GetDataProductsPaginate(id, start, totalPage);
 	}	
+	public int AddlSP(Categorys categorys) {
+		return categorysDao.save(categorys);
+	}
+	
 }
 	

@@ -5,30 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="/WEB-INF/views/layout/user/taglib.jsp"%>
 <body class="sb-nav-fixed">
-	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-	<h1>${categorys.size() }</h1>
-		<a class="navbar-brand ps-3" href="index.html">${Loginfo.displayname }</a>
-		<button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
-			id="sidebarToggle" href="#!">
-			<i class="fas fa-bars"></i>
-		</button>
-		<form
-			class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-			<div class="input-group">
-				<input class="form-control" type="text"
-					placeholder="Mã dịch vụ vận chuyển..." aria-label="Search for..."
-					aria-describedby="btnNavbarSearch" />
-				<button class="btn btn-primary" id="btnNavbarSearch" type="button">
-					<i class="fas fa-search"></i>
-				</button>
-			</div>
-		</form>
-		<ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-			<li class="nav-item"><a
-				href="<c:url value="/dang-xuat-admin"></c:url>"><span
-					class="icon-edit"></span>Đăng Xuất </a></li>
-		</ul>
-	</nav>
+	
 	<div id="layoutSidenav">
 		<div id="layoutSidenav_nav">
 			<nav class="sb-sidenav accordion sb-sidenav-dark"
@@ -48,7 +25,7 @@
 							aria-controls="collapseLayouts">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-columns"></i>
-							</div> Tài sản
+							</div> Thông Tin
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -56,9 +33,8 @@
 						<div class="collapse" id="collapseLayouts"
 							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								<a class="nav-link" href="layout-static.html">Tình trạng kho</a>
-								<a class="nav-link" href="layout-sidenav-light.html">Tình
-									trạng xe </a>
+								<a class="nav-link" href="layout-static.html">Tài khoản</a>
+								<a class="nav-link" href="<c:url value ="/admin/HienThiloaisanpham"></c:url>">Danh Sách Loại Sản Phẩm   </a>
 							</nav>
 						</div>
 						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
@@ -145,8 +121,7 @@
 								<div class="card-body">Tình trạng kho trống:</div>
 								<div
 									class="card-footer d-flex align-items-center justify-content-between">
-									<a class="small text-white stretched-link" href="#">Xem chi
-										tiết</a>
+									<a class="small text-white stretched-link" href="">Thêm</a>
 									<div class="small text-white">
 										<i class="fas fa-angle-right"></i>
 									</div>
@@ -198,43 +173,12 @@
 							<i class="fas fa-table me-1"></i> Danh sách khách hàng
 						</div>
 						<div class="card-body">
-				<div class="table-responsive">
-					<table class="table table-bordered" id="dataTable" width="100%"
-						cellspacing="0">
-						<thead>
-							<tr>
-								<th>Id</th>
-								<th>Tên loại sản phẩm</th>
-								
-							</tr>
-						</thead>
-						<tbody>
-							<c:forEach var="item" items="${categorys}">
-							<tr>
-								<td>${item.id}</td>
-								<td>${item.name}</td>
-							</tr>
-							</c:forEach>
-						</tbody>
-					</table>
-				</div>
+			
 			</div>
 					</div>
 				</div>
 			</main>
-			<footer class="py-4 bg-light mt-auto">
-				<div class="container-fluid px-4">
-					<div
-						class="d-flex align-items-center justify-content-between small">
-						<div class="text-muted">Admin &copy; Logistic</div>
-						<div>
-							<a href="#">Nguyễn Quốc Khánh</a> <span>|</span> <a href="#">Hoàng
-								Thị Yến Trinh</a> <span>|</span> <a href="#">Trần Ngọc Trung</a> <span>|</span>
-							<a href="#">Lê Vi Tú</a>
-						</div>
-					</div>
-				</div>
-			</footer>
+			
 		</div>
 	</div>
 	<script
