@@ -2,7 +2,7 @@ package demohello.Entity;
 
 public class Bill {
 
-	private long id;
+	private Integer id;
 	private String user;
 	private String phone;
 	private String displayname;
@@ -13,12 +13,25 @@ public class Bill {
 	public Bill() {
 		super();
 	}
-	public long getId() {
+	 public Bill(Integer id, String user, String phone, String displayname, String address, double total,int quanty,String note) {
+		    this.id = id;
+		    this.user = user;
+		    this.phone = phone;
+		    this.displayname = displayname;
+		    this.address = address;
+		    this.total = total;
+		    this.quanty = quanty;
+		    this.note = note;
+		  }
+	
+	public Integer getId() {
 		return id;
 	}
-	public void setId(long id) {
+
+	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getUser() {
 		return user;
 	}

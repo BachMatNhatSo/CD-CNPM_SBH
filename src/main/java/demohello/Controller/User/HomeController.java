@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import demohello.Dao.BillDao;
 import demohello.Dao.CategorysDao;
 import demohello.Dao.UsersDao;
 import demohello.Entity.Categorys;
@@ -21,6 +22,8 @@ import demohello.Service.User.CategoryServiceImpl;
 @Controller
 public class HomeController extends BaseController{
 
+	@Autowired
+	BillDao billDao =new BillDao();
 	@Autowired
 	CategorysDao categorysDao =new CategorysDao();
 	@Autowired
@@ -97,7 +100,7 @@ public class HomeController extends BaseController{
 	public ModelAndView adminDSAccount() {
 		_mvShare.setViewName("/admin/quan-tri-formaddaccounts");
 		_mvShare.addObject("accounts", new Users());
-		return _mvShare;	
+		return _mvShare;		
 	}
 	//add or update Account and  goto trang index của admin
 		@RequestMapping(value = { "/admin/ds-taikhoan" }, method = RequestMethod.POST)
@@ -126,6 +129,15 @@ public class HomeController extends BaseController{
 			userDao.deletebyid(id);			
 			return new  ModelAndView("redirect:/admin/hienthitaikhoan");
 		}
+		//Goto form admin show Bil
+		@RequestMapping(value = { "/admin/hienthihoadon" })
+		public ModelAndView adminGoToBillShow(HttpSession session, ModelMap model) {
+			_mvShare.addObject("bills", billDao.GetAllDataBill());		
+			_mvShare.setViewName("admin/quan-tri-HienThihoadon");
+			return _mvShare;
+		}
+		
+		
 	
 
 	

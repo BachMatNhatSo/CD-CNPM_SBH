@@ -25,7 +25,7 @@
 							aria-controls="collapseLayouts">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-columns"></i>
-							</div> Thông Tin
+							</div> Quản Lý
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
 							</div>
@@ -35,6 +35,7 @@
 							<nav class="sb-sidenav-menu-nested nav">
 								<a class="nav-link" href="<c:url value ="/admin/hienthitaikhoan"></c:url>">Tài khoản</a>
 								<a class="nav-link" href="<c:url value ="/admin/HienThiloaisanpham"></c:url>">Danh Sách Loại Sản Phẩm   </a>
+								<a class="nav-link" href="<c:url value ="/admin/hienthihoadon"></c:url>">Hóa Đơn</a>
 							</nav>
 						</div>
 						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
